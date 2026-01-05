@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -21,7 +21,6 @@ export default function Preloader() {
       scale: 1 
     });
 
-    // 2. Animation Sequence
     const startAnimation = () => {
       const target = document.getElementById("logo-destination");
       if (!target) return;
@@ -38,16 +37,23 @@ export default function Preloader() {
       .to(logoRef.current, {
         top: rect.top + rect.height / 2,
         left: rect.left + rect.width / 2,
-        yPercent: -45, // Fine-tuned for visual centering in the nav slot
+        yPercent: -45, 
         xPercent: -50,
-        scale: 0.16, // Shrinks to fit the navbar destination size
+        scale: 0.16, 
         duration: 1.8,
       })
+      // --- REMOVE SHIMMER HERE ---
+      .to(".logo-shimmer", {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out"
+      }, "-=1.5") // Starts fading out halfway through the flight
+      
       .to(overlayRef.current, { 
         opacity: 0, 
         duration: 1.5, 
         pointerEvents: "none" 
-      }, "<") // Start at the same time as logo flight
+      }, "<") 
       
       // Step C: Reveal UI Elements
       .to(".nav-container", { 
@@ -60,34 +66,25 @@ export default function Preloader() {
         y: 0, 
         duration: 1,
         onComplete: () => {
-          // 3. TRIGGER HERO ANIMATIONS
           window.dispatchEvent(new Event("preloaderComplete"));
         }
       }, "-=0.5");
     };
 
-    // Small delay to ensure Navbar DOM is fully painted
     const timeout = setTimeout(startAnimation, 150);
     return () => clearTimeout(timeout);
   }, { scope: overlayRef });
 
   return (
     <>
-      {/* OVERLAY LAYER 
-          Using #0A1428 to match your scrolled Navbar state.
-      */}
       <div 
         ref={overlayRef}
         className="blackout-overlay fixed inset-0 z-[110] bg-[#0A1428] flex items-center justify-center"
       >
-        {/* LIGHTING: Makes the logo "pop" from the midnight blue */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(212,175,55,0.12)_0%,_transparent_65%)]" />
-        
-        {/* GRID ACCENT: Subtle high-tech feel */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
       </div>
 
-      {/* MOVING LOGO LAYER */}
       <div 
         ref={logoRef} 
         className="fixed z-[120] w-64 h-64 pointer-events-none flex items-center justify-center"
