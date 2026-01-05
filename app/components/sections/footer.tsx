@@ -24,7 +24,7 @@ export default function InstitutionalFooter() {
           <div className="col-span-1 md:col-span-1">
             <motion.div whileHover="shimmer" className="relative inline-block mb-6 group cursor-pointer">
               <h2 className="font-[family-name:var(--font-cormorant)] text-3xl text-[#D4AF37] tracking-tighter font-bold italic">
-                TRADING<span className="text-white not-italic ml-1">ACADEMY</span>
+               Peach <span className="text-white not-italic ml-1">Trading</span> Floor
               </h2>
               <motion.div 
                 variants={{ shimmer: { x: ["-100%", "200%"] } }}
