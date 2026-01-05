@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* 1. LOCK SCROLLBAR DURING PRELOADER */
+.hide-scrollbar {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+/* 2. CUSTOM GOLD CTA SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px; /* Slightly wider for better gradient visibility */
+  display: block;
+}
+
+::-webkit-scrollbar-track {
+  background: #050B18; /* Deep Midnight */
+}
+
+::-webkit-scrollbar-thumb {
+  /* Exact 3-Tone Gold CTA Scheme */
+  background-image: linear-gradient(
+    180deg, 
+    #D4AF37 0%, 
+    #FEE6B4 50%, 
+    #B59410 100%
+  ) !important;
+  
+  border-radius: 100px;
+  /* This creates the "floating bar" look */
+  border: 3px solid #050B18; 
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Brighten effect on hover */
+  background-image: linear-gradient(
+    180deg, 
+    #FEE6B4 0%, 
+    #FFFFFF 50%, 
+    #D4AF37 100%
+  ) !important;
+}
+
+/* Firefox Specific (Doesn't support gradients, defaults to primary gold) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 #050B18;
+}
+
+@theme {
+  /* Primary Palette */
+  --color-obsidian: #05070A;
+  --color-cobalt: #0A1428;
+  --color-azure: #1E3A8A;
+  --color-alabaster: #E2E8F0;
+  
+  /* Gold Treatment Variables */
+  --color-gold-base: #D4AF37;
+  --color-gold-light: #FEE6B4;
+  --color-gold-dark: #B59410;
+
+  /* Custom Gradients as Utilities */
+  --bg-gold-metallic: linear-gradient(45deg, var(--color-gold-dark) 0%, var(--color-gold-light) 50%, var(--color-gold-base) 100%);
+  --bg-depth-radial: radial-gradient(circle at center, var(--color-cobalt) 0%, var(--color-obsidian) 100%);
+  
+  /* Typography */
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+}
+/* 
+:root {
+  --background: #ffffff; 
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
