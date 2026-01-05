@@ -105,7 +105,7 @@ export default function FoundersSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-20 border-b border-white/5 pb-20">
           <div className="founder-box lg:col-span-5 relative h-[420px] w-full rounded-lg overflow-hidden border border-white/10">
              <NextImage 
-               src="https://images.unsplash.com/photo-1556157382-97dee2dcb96a?q=80&w=2000" 
+               src="https://plus.unsplash.com/premium_photo-1663039908677-255075e7cf94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGElMjB0cmFkZXJ8ZW58MHx8MHx8fDA%3D" 
                alt="Founder" 
                fill 
                className="object-cover"

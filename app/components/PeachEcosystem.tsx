@@ -15,7 +15,7 @@ const PILLARS = [
     title: "Prop Capital",
     subtitle: "Direct Funding",
     desc: "Graduate and step onto our floor with a Prop Firm account funded at our expense. Trade our capital, keep the lion's share of the profits.",
-    img: "https://images.unsplash.com/photo-1556157382-97dee2dcb96a?q=80&w=2000",
+    img: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2070",
     icon: <Wallet2 size={20} />
   },
   {
@@ -29,7 +29,7 @@ const PILLARS = [
     title: "Global Hub",
     subtitle: "Elite Network",
     desc: "An international diaspora of elite minds. From Bayelsa to London, we trade live and win together. No one is left behind.",
-    img: "https://images.unsplash.com/photo-1523240715632-d984bc310f11?q=80&w=2000",
+    img: "https://media.istockphoto.com/id/2207359409/photo/investment-manager-working-in-office-in-front-of-computer-with-stock-market-charts-visible-on.webp?a=1&b=1&s=612x612&w=0&k=20&c=7JMH292eB3nUDb-vws98mshiVJl3lCHdad0PB2A1IYo=",
     icon: <Globe2 size={20} />
   }
 ];

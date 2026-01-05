@@ -18,12 +18,12 @@ const LIFESTYLE_ITEMS = [
   { 
     task: "Snooker Lounge", 
     desc: "Strategic Networking",
-    img: "https://images.unsplash.com/photo-1544365737-fe5792471675?q=80&w=2070"
+    img: "https://images.unsplash.com/photo-1643981693404-d76e58594bbf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFNub29rZXIlMjBMb3VuZ2V8ZW58MHx8MHx8fDA%3D"
   },
   { 
     task: "Tennis Court", 
     desc: "Physical Edge",
-    img: "https://images.unsplash.com/photo-1622279457486-62dcc4a497a8?q=80&w=2070"
+    img: "https://images.unsplash.com/photo-1761775446030-5e1fdd4166a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VGFibGUlMjBUZW5uaXMlMjBDb3VydHxlbnwwfHwwfHx8MA%3D%3D"
   },
   { 
     task: "Social Lounge", 

@@ -100,7 +100,7 @@ export default function Methodology() {
             },
             {
               title: "Risk Engineering",
-              img: "https://images.unsplash.com/photo-1551288049-bbda4833effb?q=80&w=2070&auto=format&fit=crop",
+              img: "https://images.unsplash.com/photo-1579226905180-636b76d96082?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRyYWRpbmd8ZW58MHx8MHx8fDA%3D",
               desc: "Mathematical models used by Tier-1 clearing houses."
             }
           ].map((item, i) => (
